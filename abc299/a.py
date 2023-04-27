@@ -11,6 +11,6 @@ for i in range(n):
         asterisk = i
     
 if v_bar[0] < asterisk < v_bar[1]:
-    print("in")
+    print("i")
 else:
     print("out")
