@@ -22,7 +22,7 @@ for i in range(1,m+1):
         dp[i][j] = min(dp[i][j], dp[i-1][j])
         dp[i][v] = min(dp[i][v], dp[i-1][j] + 1)
 
-if dp[m][2 ** n -1] == 10 ** 9:
+if dp[m][2 * n -1] == 10 ** 9:
     print("-1")
 else:
     print(dp[m][2**n-1])
