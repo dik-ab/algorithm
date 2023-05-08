@@ -30,3 +30,10 @@ for i in range(1, n+1):
         print(cur[i])
     else:
         print("-1")
+        
+        
+        
+n = int(input().split())
+
+
+        
