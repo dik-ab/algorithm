@@ -9,7 +9,7 @@ for i in range(2 ** n):
         if((i // wari) % 2 == 1): 
             sum += a[j]
     if sum == k:
-        print("Yes")
+        print("Ye")
         exit()
         
         

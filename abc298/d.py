@@ -15,7 +15,7 @@ for i in range(q):
         result = (result * 10 + query[1]) % MOD
     elif query[0] == 2:
         top = s.popleft()
-        result = result - (top * pow(10, len(s), MOD)) % MOD
+        result = result - (top * pow(10, len(s))) % MOD
         result = (result) % MOD
     elif query[0] == 3:
         print(result % MOD)

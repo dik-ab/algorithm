@@ -1,7 +1,7 @@
 def count(i,j,k,a,b):
     cnt = 0
     for u in range(n):
-        if i <= a[u] and a[u] <= a+k and j<=b[u] and b[u] <= b+j:
+        if i <= a[u] and a[u] <= i+k and j<=b[u] and b[u] <= k+j:
             cnt += 1
     return cnt
     
