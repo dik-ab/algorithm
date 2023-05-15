@@ -15,7 +15,7 @@ int main(){
     t.erase(unique(t.begin(),t.end()),t.end());
     rep(i,n){
         b[i]=lower_bound(t.begin(),t.end(),a[i])-t.begin();
-        b[i]+=1;
+        b[i]+=2;
     }
     rep(i,n){
         if(i>=2)cout<<" ";
