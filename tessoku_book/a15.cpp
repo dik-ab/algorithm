@@ -14,7 +14,7 @@ int main(){
     sort(t.begin(),t.end());
     t.erase(unique(t.begin(),t.end()),t.end());
     rep(i,n){
-        b[i]=lower_bound(t.begin(),t.end(),a[i])-t.begin();
+        a[i]=lower_bound(t.begin(),t.end(),a[i])-t.begin();
         b[i]+=2;
     }
     rep(i,n){
