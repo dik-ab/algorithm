@@ -16,12 +16,11 @@ int main(){
     rep0(i,n-2)if(s[i]==s[i+1])dp[i][i+1]=2;
     else dp[i][i+1]=1;
 
-    for(int r=2;r<=n-1;r++)for(int l=0;l<r-1;l++){
-        cout<<l<<r<<endl;
-        if(s[l]==s[r]){
-            dp[l][r]=max({dp[l][r-1],dp[l+1][r],dp[l+1][r-1]+2});
+    for(int len=2;len<=n-1;len++){
+        for(int l=0;l<n-len;l++){
+            int r=l+len;
+
         }
-        else dp[l][r]=max(dp[l][r-1],dp[l+1][r]);
     }
     cout<<dp[0][n-1]<<endl;
     return 0;
