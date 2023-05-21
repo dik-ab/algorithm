@@ -11,11 +11,16 @@ typedef long long ll;
 #define rep0(i,n) for(int i=0;i<=n;i++)
 #define rep(i,n) for(int i=1;i<=n;i++)
 
-//ll mod=2147483647;
-
+int n,a[100009];
 
 int main()
 {
-
-    return 0;
+    cin>>n;
+    rep(i,n)cin>>a[i];
+    ll answer=0;
+    rep(i,n){
+        answer+=map[a[i]];
+        map[a[i]]+=1;
+    }
+    cout<<answer<<endl;
 }

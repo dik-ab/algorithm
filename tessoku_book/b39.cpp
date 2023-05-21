@@ -18,7 +18,7 @@ int main(){
         int maxID=-1;
         rep(j,n){
             if(used[j]==true)continue;
-            if(x[i]>=i && maxValue>y[j]){
+            if(x[i]>=i && maxValue<y[j]){
                 maxValue=y[j];
                 maxID=j;
             }
