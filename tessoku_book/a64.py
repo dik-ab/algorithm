@@ -15,7 +15,7 @@ cur[1] = 0
 q = []
 heapq.heappush(q, (cur[1],1))
 
-while len(q) >= 1:
+while len(q) >= 2:
     pos = heapq.heappop(q)[1]
     if kakutei[pos] == True:
         continue
