@@ -12,6 +12,7 @@ typedef long long ll;
 #define rep(i,n) for(int i=1;i<=n;i++)
 
 //ll mod=2147483647;
+//ll mod=1000000007
 
 
 int main()
