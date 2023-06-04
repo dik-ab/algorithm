@@ -19,32 +19,36 @@ while(t){
 
 int main()
 {
+    string s;
+    ll n;
     cin>>s>>n;
-    reverse(s.begin(),s.end());
-    while(s.size()<60)s.push_back('0');
-    int lb=-1;
-    for(int i=0;i<60;i++){
-        if(s[i]!='?' && s[i]-'0' != (n>>i&1))lb=i;
-    }
-    if(lb==-1){
-        cout<<n<<endl;
+    if(n>=(1LL<<s.size())){
+        ll res=0;
+        for(int i=0;i<s.size();i++){
+            if(s[i]!=0)res+=1LL<<(s.size()-1-i);
+        }
+        cout<<res<<endl;
         return 0;
     }
-    for(int i=lb;i<60;i++){
-        if(s[i]=='1' || !(n>>i&1))continue;
-        s[i]='0';
-        for(int j=0;j<i;j++){
-            if(s[j]=='?')s[j]='1';
+    ll res-=1;
+    for(int d=0;d<=s.size();d++){
+        ll tmp=0;
+        bool ok=true;
+        for(int i=0;i<d;i++){
+            if(n&(1LL<<(s.size()-1-i))){
+                if(s[i]=='0')ok=false;
+            }
+            else{
+                if(s[i]=='1')ok=false;
+            }
         }
-        for(int j=i+1;j<60;j++){
-            s[j]='0'+(n>>j&1);
+        if(!ok)continue;
+        if(d<s.size() && !(n&(1LL<<(s.size()-1-d))))continue;
+        if(d<s.size() && s[d]=='1')continue;
+        for(int i=d+1;i<s.size();i++){
+            if(s[i]!='0')tmp+=1LL<<(s.size()-1-i);
         }
-        ll ans=0;
-         for (int j=0;j<60;j++) {
-            ans=ans*2 + (s[j]-'0');
-        }
-        cout<<ans<<endl;
-        return 0;
+        res=max(res,tmp);
     }
-    cout<<-1<<endl;
+    cout<<res<<endl;
 }
