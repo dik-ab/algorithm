@@ -10,9 +10,34 @@ template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; }
 //ll mod=2147483647;
 //ll mod=1000000007
 constexpr long long INF = 1000000000000000000;
-
+int n;
+string s;
+int ans=0;
+int level=0;
 int main()
 {
-
+ 
+    cin>>n;
+    cin>>s;
+    
+    for(int i=0;i<n;i++){
+        if(s[i]=='-'){
+            level=max(level,ans);
+            ans=0;
+        }
+        else ans+=1;
+    }
+    reverse(begin(s),end(s));
+    ans=0;
+    for(int i=0;i<n;i++){
+        if(s[i]=='-'){
+            level=max(level,ans);
+            ans=0;
+        }else{
+            ans+=1;
+        }
+    }
+    if(level<=0)cout<<-1<<endl;
+    else cout<<level<<endl;
     return 0;
 }
