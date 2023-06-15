@@ -18,7 +18,7 @@ for i in range(n):
 def hash_value(l,r):
     return (h[r] - h[r-l] * power100[r-l+1]) % mod
 
-for a,b,c,d in queries:
+for a,b,c,s in queries:
     hash1 = hash_value(a,b)
     hash2 = hash_value(c,d)
     if hash1 == hash2:
