@@ -4,7 +4,7 @@ queries = [list(map(int, input().split())) for _ in range(q)]
 
 t = list(map(lambda c: ord(c) - ord('a') + 1, s))
 
-mod = 2147483647
+mod = 214748364
 power100 = [None] * (n+1)
 power100[0] = 1
 for i in range(n):
