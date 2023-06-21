@@ -2,7 +2,7 @@ N, Q = map(int, input().split())
 A = list(map(int, input().split()))
 queries = [ list(map(int, input().split())) for i in range(Q) ]
 
-levels = 30
+levels = 2
 dp = [[None] * N for i in range(levels)]
 for i in range(0, N):
     dp[0][i] = A[i] - 1
