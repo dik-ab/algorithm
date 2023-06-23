@@ -1,0 +1,4 @@
+message_id,message_type,options,message,sha1digest,node_type
+105,text,,"選択してください。",,"start"
+106,text,,"Final Message from Chiplist-True End",,"end"
+107,text,,"Final Message from Chiplist-False End",,"end"
