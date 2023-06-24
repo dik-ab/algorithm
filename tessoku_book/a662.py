@@ -29,7 +29,7 @@ for tp,u,v in queries:
         uf.unite(u,v)
     if tp == 2:
         if uf.same(u,v):
-            print("Yes")
+            print("Y")
         else:
-            print("No")
+            print("N")
         
