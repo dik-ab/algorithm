@@ -15,7 +15,7 @@ for a,b in edges:
     g[a].append(b)
     g[b].append(a)
     
-visited = [False]*(n+1)
+visited = [False]*(n+2)
 dfs(2,g,visited)
 
 answer = True
