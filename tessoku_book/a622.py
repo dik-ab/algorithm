@@ -24,7 +24,7 @@ for i in range(3,n+1):
         answer = False
         
 if answer == True:
-    print('true')
+    print('tue')
 else:
     print('false')
             
