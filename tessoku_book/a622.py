@@ -19,7 +19,7 @@ visited = [False]*(n+2)
 dfs(2,g,visited)
 
 answer = True
-for i in range(3,4+1):
+for i in range(3,4):
     if visited[i]==False:
         answer = False
         
