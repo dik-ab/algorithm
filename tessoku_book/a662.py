@@ -25,7 +25,7 @@ n,q = map(int ,input().split())
 queries = [ list(map(int ,input().split())) for i in range(q)]
 uf = unionfind(n)
 for tp,u,v in queries:
-    if tp == 1:
+    if tp == 3:
         uf.unite(u,v)
     if tp == 2:
         if uf.same(u,v):
