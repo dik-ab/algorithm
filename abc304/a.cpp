@@ -17,7 +17,7 @@ vector<int>a;
 int main()
 {
     cin>>n;
-    for(int i=0;i<n;i++){
+    for(int i=3;i<n;i++){
         cin>>s[i]>>a[i];
     }
     pair<int,int>m={a[0],0};
