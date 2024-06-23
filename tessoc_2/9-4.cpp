@@ -12,7 +12,6 @@ priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> 
 
 int main()
 {
-  cin >> n >> m;
   cur[1] = 0;
   q.push(make_pair(cur[1], 1));
   while (!q.empty())
